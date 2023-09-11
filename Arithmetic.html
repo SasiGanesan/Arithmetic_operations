@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #input1 {
+        background-color: aqua;
+        font-size: 20px;
+        display: inline-flex;
+        padding: 10px;
+      }
+      #input2 {
+        padding: 10px;
+        background-color: aqua;
+        font-size: 20px;
+      }
+      #submit {
+        background-color: rgb(226, 219, 231);
+        display: block;
+      }
+      .result {
+        background-color: rgb(238, 34, 194);
+        height: 20px;
+        width: 50px;
+      }
+      .wrapper {
+        background-color: rgb(171, 212, 130);
+        height: 200px;
+        width: 500px;
+        display: flex;
+        align-content: center;
+        flex-direction: column;
+      }
+      #submit {
+        display: inline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h2>ARITHMETIC OPERATIONS </h2>
+      Num1: <input type="number" id="input1" placeholder="Enter a number" />
+      <br />
+      Num2:
+      <input type="number" id="input2" placeholder="Enter a number" /><br />
+    </div>
+    <button id="submit" onclick="Addition()">Addition</button>
+
+    <button id="submit" onclick="Subtraction()">Subtraction</button>
+    <button id="submit" onclick="Multiplication()">Multiplication</button>
+    <button id="submit" onclick="Division()">Division</button>
+
+    <div id="result"></div>
+    <script>
+      let Num1 = Number(document.getElementById("input1").value);
+      let Num2 = Number(document.getElementById("input2").value);
+
+      function Addition() {
+        const button = Number(document.getElementById("submit").textContent);
+        let Num1 = Number(document.getElementById("input1").value);
+        let Num2 = Number(document.getElementById("input2").value);
+
+        //addition
+        let addition = Num1 + Num2;
+        let result = document.getElementById("result");
+        result.innerHTML = addition;
+      }
+      function Subtraction() {
+        let Num1 = Number(document.getElementById("input1").value);
+        let Num2 = Number(document.getElementById("input2").value);
+
+        //subtraction
+        let Subtraction = Num1 - Num2;
+        let result = document.getElementById("result");
+        result.innerHTML = Subtraction;
+      }
+      function Multiplication() {
+        let Num1 = Number(document.getElementById("input1").value);
+        let Num2 = Number(document.getElementById("input2").value);
+
+        //Multiplication
+        let Multiplication = Num1 * Num2;
+        let result = document.getElementById("result");
+        result.innerHTML = Multiplication;
+      }
+      function Division() {
+        let Num1 = Number(document.getElementById("input1").value);
+        let Num2 = Number(document.getElementById("input2").value);
+
+        //Division
+        let Division = Num1 / Num2;
+        let result = document.getElementById("result");
+        result.innerHTML = Division;
+      }
+    </script>
+  </body>
+</html>
